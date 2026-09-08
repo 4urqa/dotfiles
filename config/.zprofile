@@ -1,0 +1,2 @@
+exec start-hyprland
+

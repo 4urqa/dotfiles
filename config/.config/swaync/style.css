@@ -1,0 +1,211 @@
+/*   _        _
+  __| |_ _  _| |___ ___
+ (_-<  _| || | / -_|_-<
+ /__/\__|\_, |_\___/__/
+         |__/
+
+   made by 4urqa
+*/
+
+* {
+    font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+}
+
+.control-center {
+    background-color: #1a1a1a;
+    border-radius: 18px;
+    padding: 12px;
+    padding-bottom: 4px;
+    min-height: 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.control-center .notification-center {
+    min-height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+/* MPRIS */
+.widget-mpris {
+    padding: 0;
+    margin: 0;
+}
+
+.widget-mpris:empty {
+    margin: 0;
+    padding: 0;
+}
+
+/* DND */
+.widget-dnd {
+    background-color: #262626;
+    border-radius: 12px;
+    margin: 0 0 8px 0;
+    padding: 6px 12px;
+    color: #e5e5e5;
+}
+
+.widget-dnd > switch {
+    background-color: #3a3a3a;
+    border-radius: 12px;
+}
+
+.widget-dnd > switch:checked {
+    background-color: #e5e5e5;
+}
+
+/* BUTTONS GRID */
+.widget-buttons-grid {
+    background-color: transparent;
+    padding: 0;
+    margin: 0 0 8px 0;
+}
+
+.widget-buttons-grid > flowbox {
+    padding: 0;
+    margin: 0;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild {
+    padding: 0 3px;
+    margin: 0;
+    min-width: 120px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild:first-child {
+    padding-left: 0;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild:last-child {
+    padding-right: 0;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background-color: #262626;
+    border-radius: 12px;
+    color: #f0f0f0;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background-color: #333333;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+    background-color: #e5e5e5;
+    color: #1a1a1a;
+}
+
+/* TITLE */
+.widget-title {
+    color: #a3a3a3;
+    font-size: 13px;
+    padding: 8px 4px;
+}
+
+.widget-title > button {
+    background-color: #832222;
+    color: #f0f0f0;
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.widget-title > button:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* NOTIFICATIONS */
+.widget-notifications {
+    padding: 0;
+    margin-top: 0;
+    min-height: 0px;
+}
+
+.widget-notifications label {
+    font-size: 13px;
+}
+
+.floating-notifications {
+    background: transparent;
+}
+
+.notification-row,
+.notification-group,
+.notification-background {
+    background: transparent;
+    box-shadow: none;
+}
+
+.control-center .notification,
+.floating-notifications .notification {
+    background-color: #262626;
+    border-radius: 12px;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    margin-bottom: 8px;
+    min-height: 0;
+    color: #e5e5e5;
+}
+
+.close-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #a3a3a3;
+    border-radius: 6px;
+    padding: 2px 6px;
+}
+
+.close-button:hover {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.image-empty,
+.text-empty,
+.widget-empty {
+    display: none;
+    opacity: 0;
+    min-height: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Slider scale base */
+scale {
+    background: transparent;
+}
+
+/* The trough (background bar) */
+scale trough {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 99px;
+    min-height: 6px;
+}
+
+/* The highlight (filled part) */
+scale highlight {
+    background: #ffffff;
+    border-radius: 99px;
+}
+
+/* The slider knob */
+scale slider {
+    background: #ffffff;
+    border-radius: 50%;
+    min-width: 14px;
+    min-height: 14px;
+    margin: -4px;
+}
+
+.control-center-list-placeholder {
+    opacity: 0;
+    min-height: 0px;
+    padding: 0;
+}

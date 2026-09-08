@@ -1,0 +1,65 @@
+/*
+     _        _
+  __| |_ _  _| |___ ___
+ (_-<  _| || | / -_|_-<
+ /__/\__|\_, |_\___/__/
+         |__/
+*/
+
+@define-color background #1b1b1b;
+@define-color foreground #f0f0f0;
+
+* {
+  border: none;
+  font-family: SF Pro Text;
+  font-size: 16px;
+  min-height: 32px;
+}
+
+window#waybar {
+  background: transparent;
+  color: transparent;
+}
+
+tooltip {
+  background: @background;
+}
+
+.modules-center {
+  margin-top: 8px;
+  background: @background;
+  color: @foreground;
+  border-radius: 16px;
+}
+
+#custom-notifications {
+  padding-left: 12px;
+  padding-right: 4px;
+  color: #1793d1;
+}
+#clock {
+  font-weight: bold;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+#battery {
+  font-weight: bold;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+#network,
+#wireplumber {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+#backlight {
+  padding-left: 2px;
+  padding-right: 8px;
+}
+
+#custom-weather {
+  padding-left: 2px;
+  padding-right: 12px;
+  font-weight: bold;
+}
+

@@ -1,0 +1,88 @@
+/*   _            _
+  __| |_ _  _ _ _| |____ _
+ / _| ' \ || | '_| / / _` |
+ \__|_||_\_,_|_| |_\_\__,_|
+
+    made by 4urqa
+*/
+
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "center",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "overlay",
+  "layer-shell": true,
+  "cssPriority": "user",
+  "control-center-margin-top": 4, 
+  "control-center-margin-bottom": 422,
+  "control-center-margin-right": 10,
+  "control-center-margin-left": 10,
+  "control-center-height": 0,
+  "notification-2way-tz": "local",
+  "notification-window-width": 320,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-length": 200,
+  "hide-on-clear": true,
+  "hide-on-action": false,
+  "script-fail-notify": true,
+  "widgets": [
+    "mpris",
+    "volume",
+    "backlight",
+    "buttons-grid",
+    "dnd",
+    "title",
+    "notifications"
+  ],
+  "widget-config": {
+    "volume": {
+      "label": "󰕾 "
+    },
+    "backlight": {
+      "label": "󰃞 ",
+      "device": "nvidia_wmi_ec_backlight"
+    },
+    "title": {
+      "text": "",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󰖩 ",
+          "type": "toggle",
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && rfkill unblock wifi || rfkill block wifi'",
+          "update-command": "rfkill list wifi | grep -q 'Soft blocked: yes' && echo false || echo true"
+        },
+        {
+          "label": "󰂯",
+          "type": "toggle",
+          "command": "rfkill list bluetooth | grep -q 'Soft blocked: yes' && rfkill unblock bluetooth || rfkill block bluetooth",
+          "update-command": "rfkill list bluetooth | grep -q 'Soft blocked: yes' && echo false || echo true"
+        },
+        {
+          "label": "󰌆 ",
+          "type": "toggle"
+        },
+        {
+          "label": "󰢠 ",
+          "type": "toggle",
+          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then hyprsunset -t 4000; else killall hyprsunset; fi'",
+          "update-command": "pgrep -x hyprsunset > /dev/null && echo true || echo false"
+        }
+      ]   
+    },
+    "mpris": {
+      "image-size": 64,
+      "image-radius": 8,
+      "show-album-art": true,
+      "blur-background": false
+    }
+  }
+}

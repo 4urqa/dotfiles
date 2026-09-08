@@ -1,0 +1,121 @@
+//     _            _
+//  __| |_ _  _ _ _| |____ _ 
+// / _| ' \ || | '_| / / _` |
+// \__|_||_\_,_|_| |_\_\__,_|
+// 
+// made by 4urqa
+
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "passtrough": false,
+  "gtk-layer-shell": true,
+  "height": 0,
+  "modules-left": [],
+  "modules-center": [
+    "custom/notifications",
+    "battery",
+    "network",
+    "clock",
+    "custom/weather"
+  ],
+  "modules-right": [],
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50
+  },
+  "hyprland/workspaces": {
+    "format": "{id}w",
+    "disable-scroll": true,
+    "all-outputs": true,
+    "active-only": true
+  },
+  "mpris": {
+    "format": "{player_icon} {title} | {artist} - {length}",
+    "format-paused": "{status_icon} <i>{title} | {artist} - {length}</i>",
+    "player-icons": {
+      "default": "▶"
+    },
+    "status-icons": {
+      "paused": "󰏤"
+    },
+    "ignored-players": [
+      "firefox",
+      "chromium",
+    ]
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%A %d %B %Y}"
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "󰤨 ",
+    "format-ethernet": "󱓞 Ethernet {bandwidthTotalBytes}",
+    "format-disconnected": "󰤭 ",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "󰤢   Signal Strength:  {signalStrength}%",
+    "tooltip-format-ethernet": "󰊗   Signal Strength:  {signalStrength}%",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "interval": 5
+  },
+  "wireplumber": {
+    "format": "{icon}",
+    "tooltip": false,
+    "format-muted": " ",
+    "on-click": "amixer sset Master toggle",
+    "on-scroll-up": "amixer sset Master 5%+",
+    "on-scroll-down": "amixer sset Master 5%-",
+    "scroll-step": 5,
+    "format-icons": {
+      "default": [
+        "",
+        " ",
+        " ",
+        " "
+      ]
+    }
+  },
+  "backlight": {
+    "tooltip": false,
+    "format": "󰃠 ",
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+  "battery": {
+    "tooltip": false,
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "events": {
+      "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+      "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
+      "on-charging-100": "notify-send -u normal 'Battery Full!'"
+    },
+    "format": "{icon}",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "max-length": 25
+  },
+  "custom/notifications": {
+     "format": "󰣇 ",
+     "on-click": "swaync-client -op",
+     "tooltip": false
+  },
+  "custom/weather": {
+    "format": "{} 󰅟 ",
+    "interval": 1800,
+    "exec": "cat ~/.cache/weather.txt"
+  }
+}
