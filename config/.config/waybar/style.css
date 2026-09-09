@@ -32,8 +32,8 @@ window#waybar {
 }
 
 #custom-notifications {
-  padding-left: 12px;
-  padding-right: 4px;
+  padding-left: 8px;
+  padding-right: 0px;
   color: @foreground;
 }
 
@@ -46,7 +46,7 @@ window#waybar {
 #battery {
   font-weight: bold;
   padding-left: 4px;
-  padding-right: 4px;
+  padding-right: 0px;
 }
 
 #battery.warning {
@@ -59,11 +59,11 @@ window#waybar {
 
 #network {
   padding-left: 4px;
-  padding-right: 4px;
+  padding-right: 0px;
 }
 
 #custom-weather {
-  padding-left: 4px;
-  padding-right: 12px;
+  padding-left: 0px;
+  padding-right: 8px;
   font-weight: bold;
 }
