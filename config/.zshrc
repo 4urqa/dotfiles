@@ -5,14 +5,15 @@
 #
 # made by 4urqa
 
-# NOTE: there is no installing for it, clone repository to .local/share 
-# or any other directory
-source "/home/tima/.local/share/zinit/zinit.zsh"
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
 # History #
 HISTSIZE=50000
 SAVEHIST=50000
-HISTFILE=~/.zsh_history
+HISTFILE=~/.zsh/history
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
@@ -33,7 +34,6 @@ setopt NUMERIC_GLOB_SORT
 # Plugins #
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
-#zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_AUTOSUGGEST_USE_ASYNC=1
@@ -50,13 +50,10 @@ zinit wait'1' lucid for \
     OMZP::command-not-found
 
 # PATH #
-export PATH=~/.dotnet/tools:$PATH
-export PATH=$PATH:/home/tima/.spicetify
 export PATH=~/.local/bin:$PATH
 
 # Integrations #
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 
 # Aliases #
 alias grep='grep --color=auto'
