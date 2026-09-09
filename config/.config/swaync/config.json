@@ -67,6 +67,12 @@
           "update-command": "rfkill list bluetooth | grep -q 'Soft blocked: yes' && echo false || echo true"
         },
         {
+          "label": " ",
+          "type": "toggle",
+          "command": "amixer sset Master toggle",
+          "update-command": "amixer sget Master | grep -w 'on' && echo false || echo true"
+        },
+        {
           "label": "󰢠 ",
           "type": "toggle",
           "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then hyprsunset -t 4000; else killall hyprsunset; fi'",
