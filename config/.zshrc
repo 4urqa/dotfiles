@@ -50,8 +50,6 @@ zinit wait'1' lucid for \
     OMZP::command-not-found
 
 # PATH #
-export PATH=~/.dotnet/tools:$PATH
-export PATH=$PATH:/home/tima/.spicetify
 export PATH=~/.local/bin:$PATH
 
 # Integrations #
