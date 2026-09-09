@@ -32,9 +32,6 @@ setopt NO_CASE_GLOB
 setopt NUMERIC_GLOB_SORT
 
 # Plugins #
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
@@ -50,6 +47,8 @@ zinit wait'1' lucid for \
     OMZP::command-not-found
 
 # PATH #
+export PATH=~/.dotnet/tools:$PATH
+export PATH=$PATH:~/.spicetify
 export PATH=~/.local/bin:$PATH
 
 # Integrations #
@@ -78,9 +77,9 @@ export VISUAL='nvim'
 export PAGER='less'
 export LESS='-R'
 
-# Autocompletion
+# Autocompletion #
 autoload -Uz compinit
-compinit -C 
+compinit -C
 
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
@@ -92,3 +91,4 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 unsetopt CORRECT
 unsetopt CORRECT_ALL
 KEYTIMEOUT=1
+
