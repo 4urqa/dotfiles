@@ -14,7 +14,7 @@
   "control-center-layer": "overlay",
   "layer-shell": true,
   "cssPriority": "user",
-  "control-center-margin-top": 4, 
+  "control-center-margin-top": 4,
   "control-center-margin-bottom": 422,
   "control-center-margin-right": 10,
   "control-center-margin-left": 10,
@@ -61,14 +61,10 @@
           "update-command": "rfkill list wifi | grep -q 'Soft blocked: yes' && echo false || echo true"
         },
         {
-          "label": "󰂯",
+          "label": "󰂯 ",
           "type": "toggle",
           "command": "rfkill list bluetooth | grep -q 'Soft blocked: yes' && rfkill unblock bluetooth || rfkill block bluetooth",
           "update-command": "rfkill list bluetooth | grep -q 'Soft blocked: yes' && echo false || echo true"
-        },
-        {
-          "label": "󰌆 ",
-          "type": "toggle"
         },
         {
           "label": "󰢠 ",
@@ -76,13 +72,12 @@
           "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then hyprsunset -t 4000; else killall hyprsunset; fi'",
           "update-command": "pgrep -x hyprsunset > /dev/null && echo true || echo false"
         }
-      ]   
+      ]
     },
     "mpris": {
       "image-size": 64,
       "image-radius": 8,
-      "show-album-art": true,
-      "blur-background": false
+      "blacklist": [ "firefox", "chromium" ]
     }
   }
 }

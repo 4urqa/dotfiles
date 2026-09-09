@@ -22,12 +22,11 @@
 }
 
 .control-center .notification-center {
-    min-height: 0px;
+    min-height: 0;
     margin: 0;
     padding: 0;
 }
 
-/* MPRIS */
 .widget-mpris {
     padding: 0;
     margin: 0;
@@ -38,7 +37,6 @@
     padding: 0;
 }
 
-/* DND */
 .widget-dnd {
     background-color: #262626;
     border-radius: 12px;
@@ -56,7 +54,6 @@
     background-color: #e5e5e5;
 }
 
-/* BUTTONS GRID */
 .widget-buttons-grid {
     background-color: transparent;
     padding: 0;
@@ -100,7 +97,6 @@
     color: #1a1a1a;
 }
 
-/* TITLE */
 .widget-title {
     color: #a3a3a3;
     font-size: 13px;
@@ -121,11 +117,10 @@
     color: #ffffff;
 }
 
-/* NOTIFICATIONS */
 .widget-notifications {
     padding: 0;
     margin-top: 0;
-    min-height: 0px;
+    min-height: 0;
 }
 
 .widget-notifications label {
@@ -172,30 +167,26 @@
 .widget-empty {
     display: none;
     opacity: 0;
-    min-height: 0px;
-    margin: 0px;
-    padding: 0px;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
 }
 
-/* Slider scale base */
 scale {
     background: transparent;
 }
 
-/* The trough (background bar) */
 scale trough {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 99px;
     min-height: 6px;
 }
 
-/* The highlight (filled part) */
 scale highlight {
     background: #ffffff;
     border-radius: 99px;
 }
 
-/* The slider knob */
 scale slider {
     background: #ffffff;
     border-radius: 50%;
@@ -206,6 +197,6 @@ scale slider {
 
 .control-center-list-placeholder {
     opacity: 0;
-    min-height: 0px;
+    min-height: 0;
     padding: 0;
 }

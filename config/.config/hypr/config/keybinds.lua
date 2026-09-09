@@ -68,7 +68,7 @@ hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
 -- Toggle hide/show waybar
 
 --hyprland
-hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd("hyprctl dispatch exit"))
+hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd("killall Hyprland"))
 
 --hyprpicker
 hl.bind(mainMod .. " + " .. "C", hl.dsp.exec_cmd("hyprpicker"))
